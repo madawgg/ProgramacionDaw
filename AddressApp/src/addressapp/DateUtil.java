@@ -26,7 +26,7 @@ public class DateUtil {
     public static LocalDate parse(String data){
         //en cas de que la variable no siga una data valida
         try{
-            return FORMATEJADOR_DATA.parse(data,LocalDate::from);
+            return FORMATEJADOR_DATA.parse(data, LocalDate::from);
         }catch(DateTimeParseException e){
             return null;
         }

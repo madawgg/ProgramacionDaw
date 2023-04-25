@@ -6,9 +6,13 @@ package addressapp;
 
 import java.io.File;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.FileChooser;
 
 /**
@@ -113,6 +117,17 @@ public class RootLayoutController implements Initializable {
             //so el tipus es diferent a "save obri l'explorador per a seleccionar l'arxiu
             return arxiu = seleccionador.showOpenDialog(address_app.getPrimaryStage());
         }
+    }
+    @FXML
+    public void sobreMi(ActionEvent event){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Sobre mi");
+        alert.setHeaderText("Informació de l'Autor");
+        alert.setContentText("Miguel Ángel Gutiérrez Gómez");
+        Optional<ButtonType> result = alert.showAndWait();
+        
+        
+        
     }
     
 }

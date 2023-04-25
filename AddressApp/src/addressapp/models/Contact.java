@@ -31,8 +31,16 @@ public class Contact {
         this.cognoms = new SimpleStringProperty("");
         this.domicili = new SimpleStringProperty("");
         this.ciutat  = new SimpleStringProperty("");
-        this.codi_postal = new SimpleIntegerProperty(-1);
+        this.codi_postal = new SimpleIntegerProperty(-1);    
         this.data_de_naixement = new SimpleObjectProperty<>(null);
+    }
+    public void updateContact(String nom, String cognoms, String domicili, String ciutat, int codiPostal, LocalDate dataDeNaixement) {
+        this.nom.set(nom);
+        this.cognoms.set(cognoms);
+        this.domicili.set(domicili);
+        this.ciutat.set(ciutat);
+        this.codi_postal.set(codiPostal);
+        this.data_de_naixement.set(dataDeNaixement);
     }
 
     public SimpleStringProperty getNom() {
